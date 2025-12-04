@@ -189,7 +189,7 @@ export default function DashboardPage() {
     department: "Engineering",
     salary: "$90,000",
     location: "Remote - Manila",
-    status: p.position_id % 2 === 0 ? "Active" : "On Leave", // Example conditional status
+    status: (p.position_id ?? 0) % 2 === 0 ? "Active" : "On Leave", // Example conditional status
   });
 
   function handleLogout() {
